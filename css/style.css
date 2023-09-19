@@ -32,6 +32,7 @@ a {
 	--blue: #141922;
     --dark-blue: #080b12;
     --green: #adff2f;
+    --gray: #949494;
     --dark-gray: #282828;
 	--dark: #000000;
 	--light: #FFFFFF;
@@ -56,6 +57,58 @@ aside {
     width: 230px;
 }
 
+/* PLAYER */
+
+.app-player {
+    background-color: var(--dark-gray);
+}
+
+.app-player .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.song-section {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    color: var(--gray);
+}
+
+.song-playing figure img {
+    width: 50px;
+}
+
+.song-playing {
+    display: flex;
+    gap: 10px;
+}
+
+.song-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.song-name h5 {
+    color: var(--light);
+}
+
+.song-reaction a:first-child {
+    margin-right: 8px;
+}
+
+.song-name h6:hover {
+    text-decoration: underline;
+    color: var(--light);
+}
+
+.song-reaction a:hover {
+    color: var(--light);
+}
+
+
 
 
 
@@ -76,7 +129,7 @@ aside {
 
 .debug .app-player {
     border: 3px solid green;
-    min-height: 100px;
+    /* min-height: 100px; */
 } 
 
 .debug aside {
@@ -87,6 +140,16 @@ aside {
     border: 3px solid blue;
     min-width: 100px;
 } 
+
+.debug .app-player .col {
+    border: 1px solid yellowgreen;
+    min-width: 100px;
+    min-height: 50px;
+}
+
+.debug .app-player .row {
+    border: 1px solid black;
+}
 
 
 
