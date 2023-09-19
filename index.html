@@ -24,7 +24,7 @@
         </div>
         <!-- PLAYER -->
         <div class="app-player">
-            <div class="row">
+            <div class="row space-between">
                 <div class="col player-item">
                     <div class="song-section">
                         <div class="song-playing">
@@ -44,14 +44,65 @@
 
                 </div>
                 <div class="col player-item">
-                    <div class="side-center">
+                    <div class="player-control">
+                        <div class="commands">
+                            <ul>
+                                <li>
+                                    <a href="#"><i class="fa-solid fa-shuffle"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa-solid fa-backward-step"></i>
+                                    </a>
+                                </li>
+                                <li class="play">
+                                    <a href="#">
+                                        <i class="fa-regular fa-circle-play"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa-solid fa-forward-step"></i>
+                                    </a>
+                                    
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa-solid fa-rotate-right"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="song-progress">
+                            <div class="time">
+                                0:25
+                            </div>
+                            <div class="bar-progress">
+                                <div class="bar-lg">
+                                    <progress id="song" value="20" max="100"></progress>
+                                </div>
+                                
+                            </div>
+                            <div class="time">
+                                4:35
+                            </div>
+
+                        </div>
 
                     </div>
 
                 </div>
                 <div class="col player-item">
-                    <div class="side-right">
-
+                    <div class="view-control">
+                        <a href="#"><i class="fa-solid fa-list"></i></a>
+                        <a href="#"><i class="fa-solid fa-desktop"></i></a>
+                        <a href="#"><i class="fa-solid fa-volume-high"></i></a>
+                        <div class="bar-sm">
+                            <progress id="song" value="20" max="100"></progress>
+                        </div>
+                        
                     </div>
                 </div>
             </div>

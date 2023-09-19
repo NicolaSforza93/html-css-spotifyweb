@@ -61,9 +61,11 @@ aside {
 
 .app-player {
     background-color: var(--dark-gray);
+    padding: 16px 5px;
+    overflow: hidden;
 }
 
-.app-player .row {
+.app-player .space-between {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -74,10 +76,11 @@ aside {
     align-items: center;
     gap: 40px;
     color: var(--gray);
+    padding: 5px;
 }
 
 .song-playing figure img {
-    width: 50px;
+    max-width: 35px;
 }
 
 .song-playing {
@@ -91,8 +94,16 @@ aside {
     justify-content: center;
 }
 
+.song-name * {
+    font-size: 11px;
+}
+
 .song-name h5 {
     color: var(--light);
+}
+
+.song-reaction i {
+    font-size: 12px;
 }
 
 .song-reaction a:first-child {
@@ -107,6 +118,99 @@ aside {
 .song-reaction a:hover {
     color: var(--light);
 }
+
+.player-control {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: var(--light);
+    gap: 10px;
+}
+
+.commands ul {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.commands li {
+    font-size: 13px;
+}
+
+.play i {
+    font-size: 23px;
+    padding: 0px 10px;
+}
+
+.play:hover i {
+    font-size: 25px;
+}
+
+.song-progress {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.time {
+    font-size: 8px;
+    font-weight: bold;
+}
+
+.bar-lg progress[value] {
+    display: -webkit-box;
+    appearance: none;
+    width: 300px;
+    height: 3px;
+}
+
+.bar-sm progress[value] {
+    display: -webkit-box;
+    appearance: none;
+    width: 100px;
+    height: 3px;
+}
+
+::-webkit-progress-bar {
+    background-color: grey;
+  }
+  
+::-webkit-progress-value {
+    background-color: white;
+  }
+
+  .bar-lg:hover ::-webkit-progress-value {
+    background-color: var(--green);
+  }
+
+  .bar-sm:hover ::-webkit-progress-value {
+    background-color: var(--green);
+  }
+
+  .bar-lg:hover {
+    cursor: pointer;
+  }
+
+  .bar-sm:hover {
+    cursor: pointer;
+  }
+
+
+.view-control {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    color: var(--light);
+    height: 100%;
+}
+
+.view-control i {
+    font-size: 12px;
+}
+
+
+
+
 
 
 
@@ -127,10 +231,10 @@ aside {
     min-height: 100px;
 } 
 
-.debug .app-player {
+/* .debug .app-player {
     border: 3px solid green;
-    /* min-height: 100px; */
-} 
+    min-height: 100px;
+}  */
 
 .debug aside {
     border: 3px solid orange;
@@ -141,7 +245,7 @@ aside {
     min-width: 100px;
 } 
 
-.debug .app-player .col {
+/* .debug .app-player .col {
     border: 1px solid yellowgreen;
     min-width: 100px;
     min-height: 50px;
@@ -149,7 +253,7 @@ aside {
 
 .debug .app-player .row {
     border: 1px solid black;
-}
+} */
 
 
 
