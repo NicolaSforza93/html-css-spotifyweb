@@ -3,3 +3,68 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+ul,
+ol,
+menu {
+	list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+figure img {
+    display: block;
+}
+
+a {
+	text-decoration: none;
+	color: currentColor;
+    display: inline-block;
+}
+
+:root {
+	--blue: #141922;
+    --dark-blue: #080b12;
+    --green: #adff2f;
+    --dark-gray: #282828;
+	--dark: #000000;
+	--light: #FFFFFF;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MEDIA QUERY */
+
+@media (min-width: 576px) {
+
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 992px) {
+    
+}
