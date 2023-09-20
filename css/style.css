@@ -44,6 +44,10 @@ a {
     flex-direction: column;
 }
 
+.spotify-app, .app-content, .app-player {
+    overflow: hidden;
+}
+
 .app-content {
     flex-grow: 1;
     display: flex;
@@ -53,8 +57,8 @@ main {
     flex-grow: 1;
 }
 
-aside {
-    width: 230px;
+.app-sidebar {
+    width: 50px;
 }
 
 /* PLAYER */
@@ -62,25 +66,29 @@ aside {
 .app-player {
     background-color: var(--dark-gray);
     padding: 16px 5px;
-    overflow: hidden;
-}
-
-.app-player .space-between {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+.song-section, .track-control {
+    flex-basis: 230px;
+}
+
+.player-control {
+    width: 50%;
+}
+
 .song-section {
     display: flex;
     align-items: center;
-    gap: 40px;
+    justify-content: space-between;
     color: var(--gray);
     padding: 5px;
 }
 
-.song-playing figure img {
-    max-width: 35px;
+.album-cover img {
+    width: 30px;
 }
 
 .song-playing {
@@ -102,12 +110,18 @@ aside {
     color: var(--light);
 }
 
-.song-reaction i {
-    font-size: 12px;
+.song-reaction ul {
+    display: flex;
+    flex-wrap: wrap; 
 }
 
-.song-reaction a:first-child {
-    margin-right: 8px;
+.song-reaction ul li:first-child {
+   margin-right: 10px;
+}
+
+
+.song-reaction i {
+    font-size: 12px;
 }
 
 .song-name h6:hover {
@@ -120,15 +134,16 @@ aside {
 }
 
 .player-control {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
     color: var(--light);
-    gap: 10px;
+}
+
+.commands {
+    margin-bottom: 10px;
 }
 
 .commands ul {
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 15px;
 }
@@ -157,18 +172,28 @@ aside {
     font-weight: bold;
 }
 
-.bar-lg progress[value] {
+.bar-progress {
+    flex-grow: 1;
+    position: relative;
+}
+
+.progress progress[value] {
     display: -webkit-box;
     appearance: none;
-    width: 300px;
+    width: 100%;
     height: 3px;
 }
 
-.bar-sm progress[value] {
-    display: -webkit-box;
-    appearance: none;
-    width: 100px;
-    height: 3px;
+.progress-handler {
+	width: 10px;
+	height: 10px;
+	background-color: white;
+	border-radius: 999px;
+	position: absolute;
+	left: 20%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	display: none;
 }
 
 ::-webkit-progress-bar {
@@ -179,32 +204,31 @@ aside {
     background-color: white;
   }
 
-  .bar-lg:hover ::-webkit-progress-value {
+  .bar-progress:hover .progress-handler {
+	display: block;
+}
+
+  .bar-progress:hover ::-webkit-progress-value {
     background-color: var(--green);
   }
 
-  .bar-sm:hover ::-webkit-progress-value {
+  .bar-progress:hover ::-webkit-progress-value {
     background-color: var(--green);
   }
 
-  .bar-lg:hover {
+  .bar-progress:hover {
     cursor: pointer;
   }
 
-  .bar-sm:hover {
-    cursor: pointer;
-  }
-
-
-.view-control {
+.track-control ul {
     display: flex;
     align-items: center;
     gap: 13px;
     color: var(--light);
-    height: 100%;
+    padding: 0px 10px;
 }
 
-.view-control i {
+.track-control i {
     font-size: 12px;
 }
 
@@ -236,7 +260,7 @@ aside {
     min-height: 100px;
 }  */
 
-.debug aside {
+.debug .app-sidebar {
     border: 3px solid orange;
 } 
 
@@ -279,6 +303,13 @@ aside {
 }
 
 @media (min-width: 768px) {
+    .app-sidebar {
+        width: 230px;
+    }
+
+    .album-cover img {
+        width: 45px;
+    }
 
 }
 
