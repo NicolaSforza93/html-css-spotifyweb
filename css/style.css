@@ -152,12 +152,12 @@ main {
     font-size: 13px;
 }
 
-.play i {
+.play-commands i {
     font-size: 23px;
     padding: 0px 10px;
 }
 
-.play:hover i {
+.play-commands:hover i {
     transform: scale(1.5);
 }
 
@@ -231,6 +231,99 @@ main {
 .track-control i {
     font-size: 12px;
 }
+
+/* SIDEBAR */
+
+.app-sidebar {
+    background-color: var(--dark);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.app-logo img {
+    width: 140px;
+}
+
+.app-menù {
+    color: var(--gray);
+}
+
+.menù-list img {
+    width: 25px;
+}
+
+.menù-list {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.menù-list a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.menù-list span {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.playlist {
+    color: var(--gray);
+    flex-grow: 1;
+}
+
+.playlist .title {
+    text-transform: uppercase;
+    color: var(--light);
+    font-size: 14px;
+}
+
+.playlist ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.new-playlist i {
+    font-size: 37px;
+}
+
+.new-playlist a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.playlist li {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.download img {
+    width: 17px;
+}
+
+.profile img {
+    width: 20px;
+}
+
+.download, .profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.download span {
+    color: var(--gray);
+}
+
+.profile span {
+    color: var(--light);
+}
+
 
 
 
