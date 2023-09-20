@@ -33,7 +33,7 @@ a {
     --dark-blue: #080b12;
     --green: #adff2f;
     --gray: #949494;
-    --dark-gray: #282828;
+    --dark-gray: #282828ec;
 	--dark: #000000;
 	--light: #FFFFFF;
 }
@@ -238,19 +238,26 @@ main {
     background-color: var(--dark);
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 8px;
+    padding: 10px;
 }
 
-.app-logo img {
+.logo-lg img {
     width: 140px;
+    display: none;
+}
+
+.logo-sm img {
+    max-width: 27px;
 }
 
 .app-menù {
     color: var(--gray);
+    flex-grow: 1;
 }
 
 .menù-list img {
-    width: 25px;
+    max-width: 25px;
 }
 
 .menù-list {
@@ -268,17 +275,19 @@ main {
 .menù-list span {
     font-size: 13px;
     font-weight: 700;
+    display: none;
 }
 
 .playlist {
     color: var(--gray);
-    flex-grow: 1;
+    display: none;
 }
 
 .playlist .title {
     text-transform: uppercase;
     color: var(--light);
     font-size: 14px;
+    margin-bottom: 7px;
 }
 
 .playlist ul {
@@ -291,6 +300,11 @@ main {
     font-size: 37px;
 }
 
+.new-playlist span {
+    font-size: 15px;
+    font-weight: 700;
+}
+
 .new-playlist a {
     display: flex;
     align-items: center;
@@ -299,29 +313,52 @@ main {
 
 .playlist li {
     font-size: 13px;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .download img {
-    width: 17px;
+    max-width: 17px;
 }
 
 .profile img {
-    width: 20px;
+    max-width: 23px;
+    background-color: var(--gray);
+    border-radius: 50%;
+    aspect-ratio: 1;
 }
 
 .download, .profile {
     display: flex;
     align-items: center;
     gap: 10px;
+    padding: 10px 0px;
 }
 
 .download span {
     color: var(--gray);
+    font-size: 12px;
+    font-weight: 700;
+    display: none;
 }
 
 .profile span {
     color: var(--light);
+    font-size: 14px;
+    font-weight: 700;
+    display: none;
+}
+
+.menù-list span:hover {
+    color: var(--light);
+}
+
+.playlist a:hover {
+    color: var(--light);
+}
+
+.user span:hover {
+    color: var(--light);
+    cursor: pointer;
 }
 
 
@@ -343,19 +380,19 @@ main {
     border: 2px solid black;
 }
 
-.debug .app-content {
+/* .debug .app-content {
     border: 4px solid purple;
     min-height: 100px;
-} 
+}  */
 
 /* .debug .app-player {
     border: 3px solid green;
     min-height: 100px;
 }  */
 
-.debug .app-sidebar {
+/* .debug .app-sidebar {
     border: 3px solid orange;
-} 
+}  */
 
 .debug main {
     border: 3px solid blue;
@@ -392,7 +429,7 @@ main {
 /* MEDIA QUERY */
 
 @media (min-width: 576px) {
-
+   
 }
 
 @media (min-width: 768px) {
@@ -402,6 +439,63 @@ main {
 
     .album-cover img {
         width: 45px;
+    }
+
+    .menù-list span {
+        display: inline;
+    }
+
+    .download span {
+        display: inline;
+    }
+
+    .profile span {
+        display: inline;
+    }
+
+    .download {
+        border-bottom: 1px solid var(--light);
+    }
+
+    .playlist {
+        flex-grow: 1;
+        display: block;
+    }
+
+    .app-menù {
+        flex-grow: 0;
+    }
+
+    .app-logo {
+        padding: 17px 15px 0px 15px;
+    }
+
+    .logo-lg img {
+        width: 140px;
+        display: block;
+    }
+    
+    .logo-sm img {
+        max-width: 27px;
+        display: none;
+    }
+
+    .menù-list li:first-child {
+        border-left: 4px solid var(--green);
+        padding: 0px 11px;
+    }
+
+    .menù-list li {
+        padding: 0px 15px;
+    }
+
+    .playlist, .user {
+        padding: 0px 15px;
+    }
+
+    .app-sidebar {
+        gap: 20px;
+        padding: 0;
     }
 
 }
