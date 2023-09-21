@@ -239,7 +239,6 @@ main {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    padding: 10px;
 }
 
 .logo-lg img {
@@ -247,8 +246,13 @@ main {
     display: none;
 }
 
+.app-logo {
+    padding: 6px 0px;
+}
+
 .logo-sm img {
     max-width: 27px;
+    margin: 0 auto;
 }
 
 .app-menù {
@@ -269,6 +273,7 @@ main {
 .menù-list a {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
 }
 
@@ -330,6 +335,7 @@ main {
 .download, .profile {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
     padding: 10px 0px;
 }
@@ -471,12 +477,10 @@ main {
     }
 
     .logo-lg img {
-        width: 140px;
         display: block;
     }
     
     .logo-sm img {
-        max-width: 27px;
         display: none;
     }
 
@@ -495,7 +499,14 @@ main {
 
     .app-sidebar {
         gap: 20px;
-        padding: 0;
+    }
+
+    .menù-list a {
+        justify-content: flex-start;
+    }
+
+    .download, .profile {
+        justify-content: flex-start;
     }
 
 }
