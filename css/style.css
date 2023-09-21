@@ -82,7 +82,6 @@ a {
 .song-section {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     color: var(--gray);
     padding: 5px;
 }
@@ -94,6 +93,7 @@ a {
 .song-playing {
     display: flex;
     gap: 10px;
+    flex-grow: 1;
 }
 
 .song-name {
@@ -470,6 +470,10 @@ a {
 .album-tab {
     flex-basis: calc((100% / 12) * 2);
     padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
 }
 
 .album-tab .cover {
@@ -485,7 +489,6 @@ a {
     color: var(--light);
     font-size: 13px;
     margin-bottom: 5px;
-    max-width: 160px;
 }
 
 .album-tab .author-details p {
