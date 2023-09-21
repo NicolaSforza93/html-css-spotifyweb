@@ -472,7 +472,7 @@ a {
 }
 
 .album-tab {
-    flex-basis: calc((100% / 12) * 2);
+    flex-basis: 230px;
     padding: 5px;
     display: flex;
     flex-direction: column;
@@ -481,7 +481,6 @@ a {
 }
 
 .album-tab .cover {
-    width: 160px;
     margin-bottom: 10px;
 }
 
