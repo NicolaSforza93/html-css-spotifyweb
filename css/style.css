@@ -44,7 +44,7 @@ a {
     flex-direction: column;
 }
 
-.spotify-app, .app-content, .app-player {
+.spotify-app, .app-content, .app-player, .app-main-content {
     overflow: hidden;
 }
 
@@ -53,7 +53,7 @@ a {
     display: flex;
 }
 
-main {
+.app-main-content {
     flex-grow: 1;
 }
 
@@ -366,6 +366,63 @@ main {
     color: var(--light);
     cursor: pointer;
 }
+
+/* MAIN-CONTENT */
+
+.upgrade-strip {
+    background-color: var(--dark-blue);
+    height: 80px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.button-upgrade {
+    color: var(--light);
+    background-color: var(--dark);
+    font-weight: 600;
+    font-size: 11px;
+    text-transform: uppercase;
+    display: inline-block;
+    line-height: 31px;
+    border-radius: 30px;
+    border: 1px solid var(--light);
+    padding: 0 28px;
+}
+
+.main-view {
+    background-color: var(--blue);
+    height: 100%;
+}
+
+.main-menù {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+.menù-item {
+    color: var(--gray);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 11px;
+    padding: 5px;
+    position: relative;
+}
+
+.menù-item.active::before {
+	content: '';
+	position: absolute;
+	display: block;
+	height: 2px;
+	width: 32%;
+	background-color: var(--green);
+	bottom: 0;
+    left: 26px;
+}
+
 
 
 
