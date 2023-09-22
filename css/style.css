@@ -371,6 +371,10 @@ a {
 
 /* MAIN-CONTENT */
 
+.app-main-content {
+    background-color: var(--blue);
+}
+
 .upgrade-strip {
     background-color: var(--dark-blue);
     height: 80px;
@@ -382,6 +386,7 @@ a {
 	left: 0;
 	right: 0;
 	z-index: 99999;
+    opacity: 0.8;
 }
 
 .button-upgrade {
@@ -400,10 +405,6 @@ a {
 
 .button-upgrade:hover {
     transform: scale(1.1);
-}
-
-.main-view {
-    background-color: var(--blue);
 }
 
 .main-menù {
